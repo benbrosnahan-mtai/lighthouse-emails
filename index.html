@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Lighthouse Forum Emails</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+        }
+        .header {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 24px 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header h1 { 
+            font-size: 1.5rem; 
+            font-weight: 600;
+            color: #fff;
+        }
+        .header p { 
+            color: #888; 
+            margin-top: 4px;
+            font-size: 0.9rem;
+        }
+        .subject-line {
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 20px 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .subject-line strong { color: #a5b4fc; }
+        .subject-line code {
+            background: rgba(0,0,0,0.3);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, monospace;
+            color: #fff;
+        }
+        .search-bar {
+            padding: 0 40px;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            font-size: 1rem;
+        }
+        .search-bar input::placeholder { color: #666; }
+        .search-bar input:focus {
+            outline: none;
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+        .container { padding: 20px 40px; }
+        .email-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+        .email-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            background: rgba(255,255,255,0.05);
+        }
+        .card-header {
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .card-header:hover { background: rgba(255,255,255,0.02); }
+        .contact-info h3 { 
+            font-size: 1.1rem; 
+            font-weight: 600;
+            color: #fff;
+        }
+        .contact-info .meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 2px;
+        }
+        .contact-info .email-addr {
+            font-size: 0.85rem;
+            color: #6366f1;
+            margin-top: 2px;
+        }
+        .copy-btn {
+            background: #6366f1;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #4f46e5; }
+        .copy-btn.copied { background: #10b981; }
+        .email-body {
+            padding: 20px;
+            display: none;
+            background: rgba(0,0,0,0.2);
+        }
+        .email-body.show { display: block; }
+        .email-content {
+            background: #fff;
+            color: #333;
+            padding: 24px;
+            border-radius: 8px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+        }
+        .email-content p { margin-bottom: 16px; }
+        .email-content p:last-child { margin-bottom: 0; }
+        .email-content a { color: #6366f1; }
+        .stats {
+            padding: 12px 40px;
+            color: #666;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Phoenix Lighthouse Forum Emails</h1>
+        <p>Click any contact to expand, then copy the email</p>
+    </div>
+    
+    <div class="subject-line">
+        <strong>Subject Line:</strong>
+        <code>March 23-25 in Scottsdale</code>
+    </div>
+    
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search by name or company...">
+    </div>
+    
+    <div class="stats" id="stats"></div>
+    
+    <div class="container" id="emails">
+
+        <div class="email-card" data-search="doryce norwood circle k stores inc.">
+            <div class="card-header" onclick="toggleEmail(0)">
+                <div class="contact-info">
+                    <h3>Doryce Norwood</h3>
+                    <div class="meta">General Counsel at Circle K Stores Inc.</div>
+                    <div class="email-addr">dnorwood@circlek.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(0)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-0">
+                <div class="email-content" id="content-0">
+                    <p>Hi Doryce,</p>
+<p>With Circle K's global footprint across 15,000+ locations, I wanted to share how other GCs are managing compliance at scale with AI.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>DHL, Intuit, Graybar will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="megan broughton banner health">
+            <div class="card-header" onclick="toggleEmail(1)">
+                <div class="contact-info">
+                    <h3>Megan Broughton</h3>
+                    <div class="meta">Executive Assistant to President/CEO & Executive VP Chief Legal Officer & General Counsel at Banner Health</div>
+                    <div class="email-addr">megan.broughton@bannerhealth.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(1)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-1">
+                <div class="email-content" id="content-1">
+                    <p>Hi Megan,</p>
+<p>Healthcare compliance complexity keeps growing — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="jean fitterer lance banner health">
+            <div class="card-header" onclick="toggleEmail(2)">
+                <div class="contact-info">
+                    <h3>Jean Fitterer Lance</h3>
+                    <div class="meta">EVP, Chief Legal Officer & General Counsel at Banner Health</div>
+                    <div class="email-addr">jean.lance@bannerhealth.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(2)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-2">
+                <div class="email-content" id="content-2">
+                    <p>Hi Jean,</p>
+<p>Healthcare compliance complexity keeps growing — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="lacey j. bundy petsmart">
+            <div class="card-header" onclick="toggleEmail(3)">
+                <div class="contact-info">
+                    <h3>Lacey J. Bundy</h3>
+                    <div class="meta">EVP, Chief Legal Officer & Corporate Secretary at PetSmart</div>
+                    <div class="email-addr">lbundy@petsmart.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(3)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-3">
+                <div class="email-content" id="content-3">
+                    <p>Hi Lacey J.,</p>
+<p>Retail legal teams are under pressure to do more with less — I wanted to share how a few CLOs are tackling exactly that.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>DHL, Intuit, Graybar will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="catharine ellingsen republic services">
+            <div class="card-header" onclick="toggleEmail(4)">
+                <div class="contact-info">
+                    <h3>Catharine Ellingsen</h3>
+                    <div class="meta">EVP, Chief Legal  Officer, Chief Ethics & Compliance Officer, and Corporate Secretary at Republic Services</div>
+                    <div class="email-addr">cellingsen@republicservices.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(4)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-4">
+                <div class="email-content" id="content-4">
+                    <p>Hi Catharine,</p>
+<p>ESG reporting and environmental compliance are only getting more complex — I wanted to share how others are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>National Grid, Coherent, Weir Group will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="kristine campbell u-haul">
+            <div class="card-header" onclick="toggleEmail(5)">
+                <div class="contact-info">
+                    <h3>Kristine Campbell</h3>
+                    <div class="meta">General Counsel at U-Haul</div>
+                    <div class="email-addr">kristine_campbell@uhaul.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(5)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-5">
+                <div class="email-content" id="content-5">
+                    <p>Hi Kristine,</p>
+<p>With U-Haul's franchise and rental complexity across 50 states, I wanted to share how other GCs are using AI to manage it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="brandon lombardi sprouts farmers market">
+            <div class="card-header" onclick="toggleEmail(6)">
+                <div class="contact-info">
+                    <h3>Brandon Lombardi</h3>
+                    <div class="meta">Chief Legal Officer & Corporate Secretary at Sprouts Farmers Market</div>
+                    <div class="email-addr">brandonlombardi@sprouts.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(6)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-6">
+                <div class="email-content" id="content-6">
+                    <p>Hi Brandon,</p>
+<p>Retail compliance at scale — I wanted to share how a few CLOs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, DHL, CHS will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="ignacio j. walker avery dennison corporation">
+            <div class="card-header" onclick="toggleEmail(7)">
+                <div class="contact-info">
+                    <h3>Ignacio J. Walker</h3>
+                    <div class="meta">Chief Legal Officer at Avery Dennison Corporation</div>
+                    <div class="email-addr">ignacio.walker@averydennison.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(7)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-7">
+                <div class="email-content" id="content-7">
+                    <p>Hi Ignacio J.,</p>
+<p>Global manufacturing compliance keeps getting more complex — I wanted to share how others are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Coherent, DHL, Weir Group will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="paul breaux carvana">
+            <div class="card-header" onclick="toggleEmail(8)">
+                <div class="contact-info">
+                    <h3>Paul Breaux</h3>
+                    <div class="meta">General Counsel at Carvana</div>
+                    <div class="email-addr">paul.breaux@carvana.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(8)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-8">
+                <div class="email-content" id="content-8">
+                    <p>Hi Paul,</p>
+<p>Given the regulatory landscape in auto retail, I wanted to share how other GCs are navigating it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="kristin paiva massage envy franchising, llc">
+            <div class="card-header" onclick="toggleEmail(9)">
+                <div class="contact-info">
+                    <h3>Kristin Paiva</h3>
+                    <div class="meta">General Counsel at Massage Envy Franchising, LLC</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(9)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-9">
+                <div class="email-content" id="content-9">
+                    <p>Hi Kristin,</p>
+<p>Franchise legal complexity at scale — I wanted to share how a few GCs are tackling exactly this.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="michael mccoy avnet">
+            <div class="card-header" onclick="toggleEmail(10)">
+                <div class="contact-info">
+                    <h3>Michael McCoy</h3>
+                    <div class="meta">Senior Vice President, General Counsel and Chief Legal Officer at Avnet</div>
+                    <div class="email-addr">michael.mccoy@avnet.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(10)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-10">
+                <div class="email-content" id="content-10">
+                    <p>Hi Michael,</p>
+<p>Global supply chain and distribution compliance — I wanted to share how other GCs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Coherent, DHL, Weir Group will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="steve beaver benchmark">
+            <div class="card-header" onclick="toggleEmail(11)">
+                <div class="contact-info">
+                    <h3>Steve Beaver</h3>
+                    <div class="meta">SVP, General Counsel & Chief Legal Officer at Benchmark</div>
+                    <div class="email-addr">steve.beaver@bench.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(11)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-11">
+                <div class="email-content" id="content-11">
+                    <p>Hi Steve,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="dawn northup arizona department of corrections">
+            <div class="card-header" onclick="toggleEmail(12)">
+                <div class="contact-info">
+                    <h3>Dawn Northup</h3>
+                    <div class="meta">General Counsel at Arizona Department of Corrections</div>
+                    <div class="email-addr">aoddo@azadc.gov</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(12)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-12">
+                <div class="email-content" id="content-12">
+                    <p>Hi Dawn,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="ashley oddo arizona department of corrections">
+            <div class="card-header" onclick="toggleEmail(13)">
+                <div class="contact-info">
+                    <h3>Ashley Oddo</h3>
+                    <div class="meta">General Counsel at Arizona Department of Corrections</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(13)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-13">
+                <div class="email-content" id="content-13">
+                    <p>Hi Ashley,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="rebecca collins blue yonder">
+            <div class="card-header" onclick="toggleEmail(14)">
+                <div class="contact-info">
+                    <h3>Rebecca Collins</h3>
+                    <div class="meta">General Counsel at Blue Yonder</div>
+                    <div class="email-addr">rebecca.collins@blueyonder.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(14)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-14">
+                <div class="email-content" id="content-14">
+                    <p>Hi Rebecca,</p>
+<p>Supply chain software means complex enterprise contracts — I wanted to share how other GCs are using AI for this.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="steve sinquefield standardaero">
+            <div class="card-header" onclick="toggleEmail(15)">
+                <div class="contact-info">
+                    <h3>Steve Sinquefield</h3>
+                    <div class="meta">Chief Legal Officer at StandardAero</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(15)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-15">
+                <div class="email-content" id="content-15">
+                    <p>Hi Steve,</p>
+<p>Aviation compliance and global operations — I wanted to share how a few CLOs are tackling similar complexity.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Coherent, DHL, Weir Group will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="jenny moody mty food group - kahala brands/wetzel's pretzels/bbq holdings/papa murphy's">
+            <div class="card-header" onclick="toggleEmail(16)">
+                <div class="contact-info">
+                    <h3>Jenny Moody</h3>
+                    <div class="meta">Chief Legal Officer at MTY Food Group - Kahala Brands/Wetzel's Pretzels/BBQ Holdings/Papa Murphy's</div>
+                    <div class="email-addr">jenny.moody@mtygroup.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(16)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-16">
+                <div class="email-content" id="content-16">
+                    <p>Hi Jenny,</p>
+<p>Food industry compliance and contract volume — I wanted to share how a few CLOs are tackling exactly this.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, DHL, CHS will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="christopher kevane rural/metro corporation">
+            <div class="card-header" onclick="toggleEmail(17)">
+                <div class="contact-info">
+                    <h3>Christopher Kevane</h3>
+                    <div class="meta">General Counsel at Rural/Metro Corporation</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(17)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-17">
+                <div class="email-content" id="content-17">
+                    <p>Hi Christopher,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="jonathan perez romulus restaurant group">
+            <div class="card-header" onclick="toggleEmail(18)">
+                <div class="contact-info">
+                    <h3>Jonathan Perez</h3>
+                    <div class="meta">Chief Legal Officer at Romulus Restaurant Group</div>
+                    <div class="email-addr">jperez@romulusinc.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(18)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-18">
+                <div class="email-content" id="content-18">
+                    <p>Hi Jonathan,</p>
+<p>Food industry compliance and contract volume — I wanted to share how a few CLOs are tackling exactly this.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, DHL, CHS will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="carrie pixler ryerson shamrock foods company">
+            <div class="card-header" onclick="toggleEmail(19)">
+                <div class="contact-info">
+                    <h3>Carrie Pixler Ryerson</h3>
+                    <div class="meta">General Counsel at Shamrock Foods Company</div>
+                    <div class="email-addr">carrie_ryerson@shamrockfoods.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(19)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-19">
+                <div class="email-content" id="content-19">
+                    <p>Hi Carrie,</p>
+<p>Food industry compliance and contract volume — I wanted to share how a few CLOs are tackling exactly this.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, DHL, CHS will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="david glauber apl logistics">
+            <div class="card-header" onclick="toggleEmail(20)">
+                <div class="contact-info">
+                    <h3>David Glauber</h3>
+                    <div class="meta">General Counsel at APL Logistics</div>
+                    <div class="email-addr">david_glauber@apllogistics.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(20)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-20">
+                <div class="email-content" id="content-20">
+                    <p>Hi David,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="sarah slocum collins, j.d. grand canyon education, inc.">
+            <div class="card-header" onclick="toggleEmail(21)">
+                <div class="contact-info">
+                    <h3>Sarah Slocum Collins, J.D.</h3>
+                    <div class="meta">General Counsel at Grand Canyon Education, Inc.</div>
+                    <div class="email-addr">sarah.collins@gce.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(21)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-21">
+                <div class="email-content" id="content-21">
+                    <p>Hi Sarah,</p>
+<p>Education sector compliance keeps evolving — I wanted to share how a few GCs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="chris gaskill carlisle companies incorporated">
+            <div class="card-header" onclick="toggleEmail(22)">
+                <div class="contact-info">
+                    <h3>Chris Gaskill</h3>
+                    <div class="meta">General Counsel at Carlisle Companies Incorporated</div>
+                    <div class="email-addr">cgaskill@carlisle.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(22)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-22">
+                <div class="email-content" id="content-22">
+                    <p>Hi Chris,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="amy akbay minnesota department of human services">
+            <div class="card-header" onclick="toggleEmail(23)">
+                <div class="contact-info">
+                    <h3>Amy Akbay</h3>
+                    <div class="meta">General Counsel at Minnesota Department of Human Services</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(23)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-23">
+                <div class="email-content" id="content-23">
+                    <p>Hi Amy,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="linus everling gila river indian community">
+            <div class="card-header" onclick="toggleEmail(24)">
+                <div class="contact-info">
+                    <h3>Linus Everling</h3>
+                    <div class="meta">General Counsel at Gila River Indian Community</div>
+                    <div class="email-addr">danelle.kelling@hopco.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(24)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-24">
+                <div class="email-content" id="content-24">
+                    <p>Hi Linus,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="danelle kelling healthcare outcomes performance co. (hopco)">
+            <div class="card-header" onclick="toggleEmail(25)">
+                <div class="contact-info">
+                    <h3>Danelle Kelling</h3>
+                    <div class="meta">General Counsel at Healthcare Outcomes Performance Co. (HOPCo)</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(25)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-25">
+                <div class="email-content" id="content-25">
+                    <p>Hi Danelle,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="isaiah fields axon">
+            <div class="card-header" onclick="toggleEmail(26)">
+                <div class="contact-info">
+                    <h3>Isaiah Fields</h3>
+                    <div class="meta">Chief Legal Officer at Axon</div>
+                    <div class="email-addr">ifields@axon.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(26)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-26">
+                <div class="email-content" id="content-26">
+                    <p>Hi Isaiah,</p>
+<p>Public safety tech and regulatory complexity — I wanted to share how a few CLOs are tackling similar challenges.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="steve fishbach tpi composites, inc.">
+            <div class="card-header" onclick="toggleEmail(27)">
+                <div class="contact-info">
+                    <h3>Steve Fishbach</h3>
+                    <div class="meta">General Counsel at TPI Composites, Inc.</div>
+                    <div class="email-addr">sfishbach@tpicomposites.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(27)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-27">
+                <div class="email-content" id="content-27">
+                    <p>Hi Steve,</p>
+<p>Manufacturing and supply chain compliance — I wanted to share how others are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Coherent, DHL, Weir Group will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="ryan liebengood asm">
+            <div class="card-header" onclick="toggleEmail(28)">
+                <div class="contact-info">
+                    <h3>Ryan Liebengood</h3>
+                    <div class="meta">General Counsel at ASM</div>
+                    <div class="email-addr">ryan.liebengood@asm.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(28)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-28">
+                <div class="email-content" id="content-28">
+                    <p>Hi Ryan,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="stacey kelly empire cat">
+            <div class="card-header" onclick="toggleEmail(29)">
+                <div class="contact-info">
+                    <h3>Stacey Kelly</h3>
+                    <div class="meta">General Counsel at Empire Cat</div>
+                    <div class="email-addr">skelly@empirecat.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(29)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-29">
+                <div class="email-content" id="content-29">
+                    <p>Hi Stacey,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="susan thomas universal technical institute, inc.">
+            <div class="card-header" onclick="toggleEmail(30)">
+                <div class="contact-info">
+                    <h3>Susan Thomas</h3>
+                    <div class="meta">Executive Assistant to Chief Legal Officer at Universal Technical Institute, Inc.</div>
+                    <div class="email-addr">suthomas@uti.edu</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(30)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-30">
+                <div class="email-content" id="content-30">
+                    <p>Hi Susan,</p>
+<p>Tech legal teams are under pressure to move faster — I wanted to share how others are using AI.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="jessica jarvi western alliance bank">
+            <div class="card-header" onclick="toggleEmail(31)">
+                <div class="contact-info">
+                    <h3>Jessica Jarvi</h3>
+                    <div class="meta">General Counsel at Western Alliance Bank</div>
+                    <div class="email-addr">jjarvi@westernalliancebank.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(31)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-31">
+                <div class="email-content" id="content-31">
+                    <p>Hi Jessica,</p>
+<p>Financial services compliance at scale — I wanted to share how a few GCs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, Graybar, Wellspring will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="todd wiley liberty utilities (west region)">
+            <div class="card-header" onclick="toggleEmail(32)">
+                <div class="contact-info">
+                    <h3>Todd Wiley</h3>
+                    <div class="meta">General Counsel at Liberty Utilities (West Region)</div>
+                    <div class="email-addr">twiley@libertyutilities.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(32)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-32">
+                <div class="email-content" id="content-32">
+                    <p>Hi Todd,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="clay scheitzach drivetime">
+            <div class="card-header" onclick="toggleEmail(33)">
+                <div class="contact-info">
+                    <h3>Clay Scheitzach</h3>
+                    <div class="meta">General Counsel at DriveTime</div>
+                    <div class="email-addr">clay.scheitzach@drivetime.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(33)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-33">
+                <div class="email-content" id="content-33">
+                    <p>Hi Clay,</p>
+<p>Auto finance regulatory landscape — I wanted to share how others are navigating it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="eileen fernandez phoenix union high school district">
+            <div class="card-header" onclick="toggleEmail(34)">
+                <div class="contact-info">
+                    <h3>Eileen Fernandez</h3>
+                    <div class="meta">General Counsel at Phoenix Union High School District</div>
+                    <div class="email-addr">efernandez@phoenixunion.org</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(34)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-34">
+                <div class="email-content" id="content-34">
+                    <p>Hi Eileen,</p>
+<p>Education sector compliance keeps evolving — I wanted to share how a few GCs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="melissa a. bengtson ridenow powersports">
+            <div class="card-header" onclick="toggleEmail(35)">
+                <div class="contact-info">
+                    <h3>Melissa A. Bengtson</h3>
+                    <div class="meta">EVP, Chief Legal Officer, and Corporate Secretary at RideNow Powersports</div>
+                    <div class="email-addr">melissa.bengtson@rumbleon.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(35)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-35">
+                <div class="email-content" id="content-35">
+                    <p>Hi Melissa A.,</p>
+<p>Energy sector compliance complexity — I wanted to share how others are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>National Grid, Coherent, Weir Group will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="kimberly rovtar community management holdings (cmh)">
+            <div class="card-header" onclick="toggleEmail(36)">
+                <div class="contact-info">
+                    <h3>Kimberly Rovtar</h3>
+                    <div class="meta">General Counsel at Community Management Holdings (CMH)</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(36)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-36">
+                <div class="email-content" id="content-36">
+                    <p>Hi Kimberly,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="cassandra ayres nox group">
+            <div class="card-header" onclick="toggleEmail(37)">
+                <div class="contact-info">
+                    <h3>Cassandra Ayres</h3>
+                    <div class="meta">General Counsel and Chief Legal Officer at Nox Group</div>
+                    <div class="email-addr">c.ayres@noxgroup.us</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(37)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-37">
+                <div class="email-content" id="content-37">
+                    <p>Hi Cassandra,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="theresa vella pinnacle fertility, inc.">
+            <div class="card-header" onclick="toggleEmail(38)">
+                <div class="contact-info">
+                    <h3>Theresa Vella</h3>
+                    <div class="meta">General Counsel at Pinnacle Fertility, Inc.</div>
+                    <div class="email-addr">tvella@pinnaclefertility.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(38)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-38">
+                <div class="email-content" id="content-38">
+                    <p>Hi Theresa,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="ijana harris valleywise health">
+            <div class="card-header" onclick="toggleEmail(39)">
+                <div class="contact-info">
+                    <h3>Ijana Harris</h3>
+                    <div class="meta">Executive Vice President & Chief Legal Officer at Valleywise Health</div>
+                    <div class="email-addr">michael.minnaugh@mvncorp.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(39)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-39">
+                <div class="email-content" id="content-39">
+                    <p>Hi Ijana,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="linda rawles grand canyon university">
+            <div class="card-header" onclick="toggleEmail(40)">
+                <div class="contact-info">
+                    <h3>Linda Rawles</h3>
+                    <div class="meta">General Counsel at Grand Canyon University</div>
+                    <div class="email-addr">linda.rawles@gcu.edu</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(40)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-40">
+                <div class="email-content" id="content-40">
+                    <p>Hi Linda,</p>
+<p>Education sector compliance keeps evolving — I wanted to share how a few GCs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="jay pricher bwh℠ hotels">
+            <div class="card-header" onclick="toggleEmail(41)">
+                <div class="contact-info">
+                    <h3>Jay Pricher</h3>
+                    <div class="meta">General Counsel at BWH℠ Hotels</div>
+                    <div class="email-addr">ijana.harris@valleywisehealth.org</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(41)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-41">
+                <div class="email-content" id="content-41">
+                    <p>Hi Jay,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="michael minnaugh moon valley nurseries">
+            <div class="card-header" onclick="toggleEmail(42)">
+                <div class="contact-info">
+                    <h3>Michael Minnaugh</h3>
+                    <div class="meta">Executive Vice President, Chief Legal Officer at Moon Valley Nurseries</div>
+                    <div class="email-addr">danelle.kelling@hopco.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(42)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-42">
+                <div class="email-content" id="content-42">
+                    <p>Hi Michael,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="danelle kelling healthcare outcomes performance co. (hopco)">
+            <div class="card-header" onclick="toggleEmail(43)">
+                <div class="contact-info">
+                    <h3>Danelle Kelling</h3>
+                    <div class="meta">General Counsel at Healthcare Outcomes Performance Co. (HOPCo)</div>
+                    <div class="email-addr">bill.sawkiw@passporthealthusa.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(43)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-43">
+                <div class="email-content" id="content-43">
+                    <p>Hi Danelle,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="bill sawkiw passport health">
+            <div class="card-header" onclick="toggleEmail(44)">
+                <div class="contact-info">
+                    <h3>Bill Sawkiw</h3>
+                    <div class="meta">General Counsel at Passport Health</div>
+                    <div class="email-addr">jay.pricher@bwh.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(44)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-44">
+                <div class="email-content" id="content-44">
+                    <p>Hi Bill,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="mark van vleet 3z brands">
+            <div class="card-header" onclick="toggleEmail(45)">
+                <div class="contact-info">
+                    <h3>Mark Van Vleet</h3>
+                    <div class="meta">General Counsel at 3Z Brands</div>
+                    <div class="email-addr">mark.vanvleet@3zbrands.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(45)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-45">
+                <div class="email-content" id="content-45">
+                    <p>Hi Mark,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="jeffrey h. discovery land company">
+            <div class="card-header" onclick="toggleEmail(46)">
+                <div class="contact-info">
+                    <h3>Jeffrey H.</h3>
+                    <div class="meta">General Counsel at Discovery Land Company</div>
+                    <div class="email-addr">jholland@discoverylandco.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(46)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-46">
+                <div class="email-content" id="content-46">
+                    <p>Hi Jeffrey,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="benjamin runkle community bridges">
+            <div class="card-header" onclick="toggleEmail(47)">
+                <div class="contact-info">
+                    <h3>Benjamin Runkle</h3>
+                    <div class="meta">Chief Legal Officer at Community Bridges</div>
+                    <div class="email-addr">benjamin.runkle@cbridges.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(47)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-47">
+                <div class="email-content" id="content-47">
+                    <p>Hi Benjamin,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="dennis naughton roman catholic diocese of phoenix">
+            <div class="card-header" onclick="toggleEmail(48)">
+                <div class="contact-info">
+                    <h3>Dennis Naughton</h3>
+                    <div class="meta">General Counsel at Roman Catholic Diocese of Phoenix</div>
+                    <div class="email-addr">dnaughton@dphx.org</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(48)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-48">
+                <div class="email-content" id="content-48">
+                    <p>Hi Dennis,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="jon massimino ges - global experience specialists">
+            <div class="card-header" onclick="toggleEmail(49)">
+                <div class="contact-info">
+                    <h3>Jon Massimino</h3>
+                    <div class="meta">Chief Legal Officer at GES - Global Experience Specialists</div>
+                    <div class="email-addr">jmassimino@ges.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(49)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-49">
+                <div class="email-content" id="content-49">
+                    <p>Hi Jon,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="kelleen brennan sweetwater">
+            <div class="card-header" onclick="toggleEmail(50)">
+                <div class="contact-info">
+                    <h3>Kelleen Brennan</h3>
+                    <div class="meta">General Counsel at Sweetwater</div>
+                    <div class="email-addr">kelleen_brennan@sweetwater.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(50)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-50">
+                <div class="email-content" id="content-50">
+                    <p>Hi Kelleen,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="darren kameya glendale unified school district">
+            <div class="card-header" onclick="toggleEmail(51)">
+                <div class="contact-info">
+                    <h3>Darren Kameya</h3>
+                    <div class="meta">General Counsel at Glendale Unified School District</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(51)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-51">
+                <div class="email-content" id="content-51">
+                    <p>Hi Darren,</p>
+<p>Education sector compliance keeps evolving — I wanted to share how a few GCs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="anthony (tony) deprima coal brick oven pizzeria, inc.">
+            <div class="card-header" onclick="toggleEmail(52)">
+                <div class="contact-info">
+                    <h3>Anthony (Tony) Deprima</h3>
+                    <div class="meta">General Counsel at Coal Brick Oven Pizzeria, Inc.</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(52)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-52">
+                <div class="email-content" id="content-52">
+                    <p>Hi Anthony (Tony),</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="tony dent davis-standard">
+            <div class="card-header" onclick="toggleEmail(53)">
+                <div class="contact-info">
+                    <h3>Tony Dent</h3>
+                    <div class="meta">Chief Legal Officer at Davis-Standard</div>
+                    <div class="email-addr">tdent@davis-standard.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(53)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-53">
+                <div class="email-content" id="content-53">
+                    <p>Hi Tony,</p>
+<p>Manufacturing and supply chain compliance — I wanted to share how others are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Coherent, DHL, Weir Group will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="gordon kushner eci software solutions">
+            <div class="card-header" onclick="toggleEmail(54)">
+                <div class="contact-info">
+                    <h3>Gordon Kushner</h3>
+                    <div class="meta">Chief Legal Officer at ECi Software Solutions</div>
+                    <div class="email-addr">mpierce@suntecconcrete.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(54)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-54">
+                <div class="email-content" id="content-54">
+                    <p>Hi Gordon,</p>
+<p>Tech legal teams are under pressure to move faster — I wanted to share how others are using AI.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="matthew pierce suntec concrete">
+            <div class="card-header" onclick="toggleEmail(55)">
+                <div class="contact-info">
+                    <h3>Matthew Pierce</h3>
+                    <div class="meta">General Counsel at Suntec Concrete</div>
+                    <div class="email-addr">gkushner@ecisolutions.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(55)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-55">
+                <div class="email-content" id="content-55">
+                    <p>Hi Matthew,</p>
+<p>Manufacturing and supply chain compliance — I wanted to share how others are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Coherent, DHL, Weir Group will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="philip l. brailsford arizona department of public safety">
+            <div class="card-header" onclick="toggleEmail(56)">
+                <div class="contact-info">
+                    <h3>Philip L. Brailsford</h3>
+                    <div class="meta">General Counsel at Arizona Department of Public Safety</div>
+                    <div class="email-addr">pbrailsford@azdps.gov</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(56)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-56">
+                <div class="email-content" id="content-56">
+                    <p>Hi Philip L.,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="chad fuller k. hovnanian homes">
+            <div class="card-header" onclick="toggleEmail(57)">
+                <div class="contact-info">
+                    <h3>Chad Fuller</h3>
+                    <div class="meta">Vice President, Chief Legal Officer at K. Hovnanian Homes</div>
+                    <div class="email-addr">cfuller@khov.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(57)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-57">
+                <div class="email-content" id="content-57">
+                    <p>Hi Chad,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="randy mccaskill rain carbon inc">
+            <div class="card-header" onclick="toggleEmail(58)">
+                <div class="contact-info">
+                    <h3>Randy McCaskill</h3>
+                    <div class="meta">General Counsel at Rain Carbon Inc</div>
+                    <div class="email-addr">randy.mccaskill@raincarbon.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(58)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-58">
+                <div class="email-content" id="content-58">
+                    <p>Hi Randy,</p>
+<p>Tech legal teams are under pressure to move faster — I wanted to share how others are using AI.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="tracy cheney early warning services">
+            <div class="card-header" onclick="toggleEmail(59)">
+                <div class="contact-info">
+                    <h3>Tracy Cheney</h3>
+                    <div class="meta">General Counsel at Early Warning Services</div>
+                    <div class="email-addr">tracy.cheney@earlywarning.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(59)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-59">
+                <div class="email-content" id="content-59">
+                    <p>Hi Tracy,</p>
+<p>Fintech compliance and regulatory complexity — I wanted to share how a few GCs are tackling similar challenges.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, Graybar, Wellspring will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="sammi-jo nevin independence pet holdings">
+            <div class="card-header" onclick="toggleEmail(60)">
+                <div class="contact-info">
+                    <h3>Sammi-Jo Nevin</h3>
+                    <div class="meta">Chief Legal Officer at Independence Pet Holdings</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(60)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-60">
+                <div class="email-content" id="content-60">
+                    <p>Hi Sammi-Jo,</p>
+<p>Retail legal teams are doing more with less — I wanted to share how a few CLOs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>DHL, Intuit, Graybar will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="max mccauley harkins theatres">
+            <div class="card-header" onclick="toggleEmail(61)">
+                <div class="contact-info">
+                    <h3>Max McCauley</h3>
+                    <div class="meta">General Counsel at Harkins Theatres</div>
+                    <div class="email-addr">maxmccauley@harkins.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(61)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-61">
+                <div class="email-content" id="content-61">
+                    <p>Hi Max,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="dennis carpenter, jr. maricopa county superior court">
+            <div class="card-header" onclick="toggleEmail(62)">
+                <div class="contact-info">
+                    <h3>Dennis Carpenter, Jr.</h3>
+                    <div class="meta">General Counsel at Maricopa County Superior Court</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(62)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-62">
+                <div class="email-content" id="content-62">
+                    <p>Hi Dennis,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="lisa harris summit healthcare regional medical center">
+            <div class="card-header" onclick="toggleEmail(63)">
+                <div class="contact-info">
+                    <h3>Lisa Harris</h3>
+                    <div class="meta">General Counsel at Summit Healthcare Regional Medical Center</div>
+                    <div class="email-addr">keriann.atencio@desertfinancial.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(63)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-63">
+                <div class="email-content" id="content-63">
+                    <p>Hi Lisa,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="keriann atencio desert financial credit union">
+            <div class="card-header" onclick="toggleEmail(64)">
+                <div class="contact-info">
+                    <h3>Keriann Atencio</h3>
+                    <div class="meta">General Counsel at Desert Financial Credit Union</div>
+                    <div class="email-addr">lisa.harris@summithealthcare.net</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(64)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-64">
+                <div class="email-content" id="content-64">
+                    <p>Hi Keriann,</p>
+<p>Financial services compliance at scale — I wanted to share how a few GCs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, Graybar, Wellspring will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="stephanie elzenga arizona department of health services">
+            <div class="card-header" onclick="toggleEmail(65)">
+                <div class="contact-info">
+                    <h3>Stephanie Elzenga</h3>
+                    <div class="meta">General Counsel at Arizona Department of Health Services</div>
+                    <div class="email-addr">stephanie.elzenga@azdhs.gov</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(65)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-65">
+                <div class="email-content" id="content-65">
+                    <p>Hi Stephanie,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="yvonne moss make-a-wish america">
+            <div class="card-header" onclick="toggleEmail(66)">
+                <div class="contact-info">
+                    <h3>Yvonne Moss</h3>
+                    <div class="meta">Chief Legal Officer at Make-A-Wish America</div>
+                    <div class="email-addr">ymoss@wish.org</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(66)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-66">
+                <div class="email-content" id="content-66">
+                    <p>Hi Yvonne,</p>
+<p>Nonprofit compliance at scale — I wanted to share how others are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="hsin pai arizona department of revenue">
+            <div class="card-header" onclick="toggleEmail(67)">
+                <div class="contact-info">
+                    <h3>Hsin Pai</h3>
+                    <div class="meta">General Counsel at Arizona Department of Revenue</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(67)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-67">
+                <div class="email-content" id="content-67">
+                    <p>Hi Hsin,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="david greene risas dental and braces">
+            <div class="card-header" onclick="toggleEmail(68)">
+                <div class="contact-info">
+                    <h3>David Greene</h3>
+                    <div class="meta">General Counsel at Risas Dental and Braces</div>
+                    <div class="email-addr">dgreene@risasdental.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(68)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-68">
+                <div class="email-content" id="content-68">
+                    <p>Hi David,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="christine tønsberg nilsen cognite">
+            <div class="card-header" onclick="toggleEmail(69)">
+                <div class="contact-info">
+                    <h3>Christine Tønsberg Nilsen</h3>
+                    <div class="meta">General Counsel at Cognite</div>
+                    <div class="email-addr">christine@hubspot.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(69)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-69">
+                <div class="email-content" id="content-69">
+                    <p>Hi Christine Tønsberg,</p>
+<p>Industrial software and enterprise contracts — I wanted to share how a few CLOs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="ellen frank vixxo">
+            <div class="card-header" onclick="toggleEmail(70)">
+                <div class="contact-info">
+                    <h3>Ellen Frank</h3>
+                    <div class="meta">General Counsel at Vixxo</div>
+                    <div class="email-addr">ellen.frank@vixxo.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(70)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-70">
+                <div class="email-content" id="content-70">
+                    <p>Hi Ellen,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="kevin heaphy isagenix">
+            <div class="card-header" onclick="toggleEmail(71)">
+                <div class="contact-info">
+                    <h3>Kevin Heaphy</h3>
+                    <div class="meta">General Counsel at Isagenix</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(71)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-71">
+                <div class="email-content" id="content-71">
+                    <p>Hi Kevin,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="nicholas cote, esq. mint cannabis">
+            <div class="card-header" onclick="toggleEmail(72)">
+                <div class="contact-info">
+                    <h3>Nicholas Cote, Esq.</h3>
+                    <div class="meta">General Counsel at Mint Cannabis</div>
+                    <div class="email-addr">kevin.heaphy@isagenixcorp.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(72)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-72">
+                <div class="email-content" id="content-72">
+                    <p>Hi Nicholas,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="kaja-anne jezycki tessenderlo kerley, inc">
+            <div class="card-header" onclick="toggleEmail(73)">
+                <div class="contact-info">
+                    <h3>Kaja-Anne Jezycki</h3>
+                    <div class="meta">Chief Legal Counsel -- US subsidiaries at Tessenderlo Kerley, Inc</div>
+                    <div class="email-addr">kaja-anne.jezycki@tkinet.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(73)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-73">
+                <div class="email-content" id="content-73">
+                    <p>Hi Kaja-Anne,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="erika ahern curran apco holdings, llc">
+            <div class="card-header" onclick="toggleEmail(74)">
+                <div class="contact-info">
+                    <h3>Erika Ahern Curran</h3>
+                    <div class="meta">Chief Legal Officer at APCO Holdings, LLC</div>
+                    <div class="email-addr">ecurran@apcoholdings.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(74)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-74">
+                <div class="email-content" id="content-74">
+                    <p>Hi Erika,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="matt anderson mind 24-7">
+            <div class="card-header" onclick="toggleEmail(75)">
+                <div class="contact-info">
+                    <h3>Matt Anderson</h3>
+                    <div class="meta">Chief Legal Officer at MIND 24-7</div>
+                    <div class="email-addr">manderson@mind24-7.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(75)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-75">
+                <div class="email-content" id="content-75">
+                    <p>Hi Matt,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="james a. apogee physicians">
+            <div class="card-header" onclick="toggleEmail(76)">
+                <div class="contact-info">
+                    <h3>James A.</h3>
+                    <div class="meta">General Counsel at Apogee Physicians</div>
+                    <div class="email-addr">james.craft@apogeephysicians.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(76)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-76">
+                <div class="email-content" id="content-76">
+                    <p>Hi James,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="robert anderson peoples mortgage">
+            <div class="card-header" onclick="toggleEmail(77)">
+                <div class="contact-info">
+                    <h3>Robert Anderson</h3>
+                    <div class="meta">General Counsel at Peoples Mortgage</div>
+                    <div class="email-addr">randerson@peoplesmortgage.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(77)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-77">
+                <div class="email-content" id="content-77">
+                    <p>Hi Robert,</p>
+<p>Financial services compliance at scale — I wanted to share how a few GCs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, Graybar, Wellspring will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="leanne wilhardt 21st century healthcare, inc.">
+            <div class="card-header" onclick="toggleEmail(78)">
+                <div class="contact-info">
+                    <h3>Leanne Wilhardt</h3>
+                    <div class="meta">General Counsel at 21st Century HealthCare, Inc.</div>
+                    <div class="email-addr">leannew@21stcenturyvitamins.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(78)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-78">
+                <div class="email-content" id="content-78">
+                    <p>Hi Leanne,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="lorie birk terros health">
+            <div class="card-header" onclick="toggleEmail(79)">
+                <div class="contact-info">
+                    <h3>Lorie Birk</h3>
+                    <div class="meta">General Counsel at Terros Health</div>
+                    <div class="email-addr">lorie.birk@terroshealth.org</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(79)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-79">
+                <div class="email-content" id="content-79">
+                    <p>Hi Lorie,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="david g. everpower.ai">
+            <div class="card-header" onclick="toggleEmail(80)">
+                <div class="contact-info">
+                    <h3>David G.</h3>
+                    <div class="meta">General Counsel at EverPower.AI</div>
+                    <div class="email-addr">david@everpower.ai</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(80)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-80">
+                <div class="email-content" id="content-80">
+                    <p>Hi David,</p>
+<p>Tech legal teams are under pressure to move faster — I wanted to share how others are using AI.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="jim odenkirk arizona game and fish department">
+            <div class="card-header" onclick="toggleEmail(81)">
+                <div class="contact-info">
+                    <h3>Jim Odenkirk</h3>
+                    <div class="meta">General Counsel at Arizona Game and Fish Department</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(81)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-81">
+                <div class="email-content" id="content-81">
+                    <p>Hi Jim,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="ekumene lysonge nerdwallet">
+            <div class="card-header" onclick="toggleEmail(82)">
+                <div class="contact-info">
+                    <h3>Ekumene Lysonge</h3>
+                    <div class="meta">Chief Legal Officer and Corporate Secretary at NerdWallet</div>
+                    <div class="email-addr">elysonge@nerdwallet.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(82)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-82">
+                <div class="email-content" id="content-82">
+                    <p>Hi Ekumene,</p>
+<p>Fintech compliance and growth — I wanted to share how other GCs are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="molly machold cbre | facilitysource">
+            <div class="card-header" onclick="toggleEmail(83)">
+                <div class="contact-info">
+                    <h3>Molly Machold</h3>
+                    <div class="meta">General Counsel at CBRE | facilitysource</div>
+                    <div class="email-addr">mmachold@facilitysource.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(83)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-83">
+                <div class="email-content" id="content-83">
+                    <p>Hi Molly,</p>
+
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="s. joshua rogers dragonfly health">
+            <div class="card-header" onclick="toggleEmail(84)">
+                <div class="contact-info">
+                    <h3>S. Joshua Rogers</h3>
+                    <div class="meta">General Counsel at Dragonfly Health</div>
+                    <div class="email-addr">joshua.rogers@dragonflyhealth.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(84)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-84">
+                <div class="email-content" id="content-84">
+                    <p>Hi S. Joshua,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="joel agena playstudios">
+            <div class="card-header" onclick="toggleEmail(85)">
+                <div class="contact-info">
+                    <h3>Joel Agena</h3>
+                    <div class="meta">General Counsel at PLAYSTUDIOS</div>
+                    <div class="email-addr">joel@playstudios.com</div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(85)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-85">
+                <div class="email-content" id="content-85">
+                    <p>Hi Joel,</p>
+<p>Tech legal teams are under pressure to move faster — I wanted to share how others are using AI.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Intuit, ServiceNow, Udemy will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-card" data-search="matt mitchell fortis healthcare solutions">
+            <div class="card-header" onclick="toggleEmail(86)">
+                <div class="contact-info">
+                    <h3>Matt Mitchell</h3>
+                    <div class="meta">General Counsel at Fortis Healthcare Solutions</div>
+                    <div class="email-addr"></div>
+                </div>
+                <button class="copy-btn" onclick="event.stopPropagation(); copyEmail(86)">Copy Email</button>
+            </div>
+            <div class="email-body" id="body-86">
+                <div class="email-content" id="content-86">
+                    <p>Hi Matt,</p>
+<p>Healthcare compliance keeps getting more complex — I wanted to share how legal leaders in your space are approaching it.</p>
+<p>I'm hosting our <a href="https://lighthouse.eudia.com/">Lighthouse Customer Forum</a> at the Omni Scottsdale March 23-25. CLOs and other executive leaders are sharing how they've changed their legal functions with AI.</p>
+<p>Cargill, BASF, DHL will be joining us.</p>
+<p>We've also been working with the Arizona Bar Foundation on AI for Good initiatives. We'll be sharing some of those insights during the forum as well.</p>
+<p>We're finalizing the attendee list in the next two weeks.</p>
+<p><a href="https://lighthouse.eudia.com/register">Your invite.</a></p>
+<p>Best,<br>Omar</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        const cards = document.querySelectorAll('.email-card');
+        const stats = document.getElementById('stats');
+        stats.textContent = `${cards.length} contacts`;
+        
+        function toggleEmail(i) {
+            const body = document.getElementById('body-' + i);
+            body.classList.toggle('show');
+        }
+        
+        function copyEmail(i) {
+            const content = document.getElementById('content-' + i);
+            const btn = content.closest('.email-card').querySelector('.copy-btn');
+            
+            // Create a temporary container
+            const temp = document.createElement('div');
+            temp.innerHTML = content.innerHTML;
+            document.body.appendChild(temp);
+            
+            // Select and copy
+            const range = document.createRange();
+            range.selectNodeContents(temp);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            document.execCommand('copy');
+            sel.removeAllRanges();
+            document.body.removeChild(temp);
+            
+            // Visual feedback
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.textContent = 'Copy Email';
+                btn.classList.remove('copied');
+            }, 2000);
+        }
+        
+        document.getElementById('search').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            let visible = 0;
+            cards.forEach(card => {
+                const match = card.dataset.search.includes(query);
+                card.style.display = match ? 'block' : 'none';
+                if (match) visible++;
+            });
+            stats.textContent = query ? `${visible} of ${cards.length} contacts` : `${cards.length} contacts`;
+        });
+    </script>
+</body>
+</html>
